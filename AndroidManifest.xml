@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2013 Ray Zhou
+
+JadeRead is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JadeRead is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with JadeRead.  If not, see <http://www.gnu.org/licenses/>
+
+Author: Ray Zhou
+Date: 2013 04 26
+
+-->
+<!-- android:installLocation="auto" allows "Move to Sd card" button  -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.zyz.mobile"
+          android:installLocation="auto"
+          android:versionCode="9"
+          android:versionName="0.9.RC6">
+    <!--
+     android:versionCode - internal use, increment each time the app is updated
+     android:versionName - visible to user
+    -->
+    <uses-sdk android:minSdkVersion="10"
+              android:targetSdkVersion="17"
+            />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- to download dictionary -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- to save dictionary -->
+
+    <application android:icon="@drawable/jade"
+                 android:label="@string/app_name">
+        <activity android:name=".file.FileManager"
+                  android:label="@string/filemanager"
+                />
+        <activity android:name=".jade.BookmarkActivity"
+                  android:label="@string/app_name"
+                />
+        <activity android:name=".jade.JTextActivity"
+                  android:label="@string/app_name"
+                  android:hardwareAccelerated="false">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".jade.JadeActivity"
+                  android:label="@string/app_name"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".jade.SettingActivity"
+                  android:label="@string/settings"
+                />
+        <activity
+                android:name=".jade.HelpActivity"
+                android:label="@string/help"
+                />
+    </application>
+</manifest>

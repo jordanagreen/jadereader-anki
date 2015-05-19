@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2013 Ray Zhou
+
+JadeRead is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JadeRead is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with JadeRead.  If not, see <http://www.gnu.org/licenses/>
+
+Author: Ray Zhou
+Date: 2013 04 26
+
+-->
+<!-- 
+	FrameLayout allows elements to be stack on top of one another.
+	see http://developer.android.com/resources/articles/layout-tricks-merge.html
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:jade="http://schemas.android.com/apk/res/com.zyz.mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!-- the text should be the background, so it's put as the first element -->
+    <com.zyz.mobile.widget.JScrollView
+            android:id="@id/scroller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_bg"
+            android:fillViewport="true">
+
+
+        <com.zyz.mobile.widget.JTextView
+                android:id="@id/booktext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
+
+    </com.zyz.mobile.widget.JScrollView>
+
+    <com.zyz.mobile.widget.ExpandableListView
+            android:id="@id/definition_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"
+            jade:bar_height="40dp"
+            jade:close_button_width="50dp"
+            jade:base_text_size="20sp"
+            jade:background_color="@color/control_background"
+            />
+
+    <com.zyz.mobile.widget.Slider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@id/brightness_seeker"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="60dp"/>
+
+    <com.zyz.mobile.widget.Slider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@id/text_seeker"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="60dp"/>
+
+    <com.zyz.mobile.widget.MenuBar
+            android:id="@id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            jade:button_background="@color/control_background"
+            jade:button_background_on_pressed="@color/control_on_pressed"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            />
+
+    <com.zyz.mobile.widget.MenuBar
+            android:id="@id/secondary_option_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            jade:button_background="@color/control_background"
+            jade:button_background_on_pressed="@color/control_on_pressed"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            />
+
+    <com.zyz.mobile.widget.MenuBar
+            android:id="@id/main_option_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            jade:button_background="@color/control_background"
+            jade:button_background_on_pressed="@color/control_on_pressed"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"
+            />
+
+    <com.zyz.mobile.widget.MenuBar
+            android:id="@id/word_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            jade:button_background="@color/control_background"
+            jade:button_background_on_pressed="@color/control_on_pressed"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            />
+</RelativeLayout>

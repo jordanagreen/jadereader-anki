@@ -1,0 +1,14 @@
+<book offset="293">
+	<bookmarks>
+		<!-- b=bookmark s=starting offset-->
+		<b s="20" />
+		<b s="30" />
+	</bookmarks>
+	<spans>
+		<!-- s=span t=type c=color ss=starting offset e=ending offset-->
+		<s t="1" c="00444455" s="20" e="40" >
+			<note>some notes</notes>
+		</s>
+		<s t="2" c="44008765" s="30" e="50" />
+	</spans>
+</book>

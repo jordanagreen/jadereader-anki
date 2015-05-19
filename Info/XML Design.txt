@@ -1,0 +1,6 @@
+<book offset='34'>
+	<interest type='1' color='0' percent='65' offset='4488' len='17'>
+		<text>text</text>
+		<note>note</note>
+	</interest>
+</book>

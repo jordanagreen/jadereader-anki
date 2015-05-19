@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2013 Ray Zhou
+
+JadeRead is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JadeRead is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with JadeRead.  If not, see <http://www.gnu.org/licenses/>
+
+Author: Ray Zhou
+Date: 2013 04 26
+
+-->
+<resources>
+    <string name="rate_my_app">If you enjoyed using %s, please take a moment to rate the app. Thank
+        you for your support!
+    </string>
+    <string name="msg_rate">Rate</string>
+    <string name="msg_later">Later</string>
+    <string name="msg_never">Never</string>
+
+    <!-- miscellenous -->
+    <string name="history_title">Recently opened files</string>
+    <string name="app_name">Jade Reader</string>
+    <string name="jtext">JText</string>
+    <string name="choose_file">Choose File</string>
+    <string name="definition">Definitions</string>
+    <string name="build_dict">Build Dictionary</string>
+    <string name="settings">Settings</string>
+    <string name="text_size_change_dialog">Change Font Size</string>
+    <string name="cursor">cursor</string>
+    <string name="delete_history_title">Remove recently opened files from list</string>
+    <string name="delete_history">Remove from list</string>
+    <string name="delete_all_history">Remove all from list</string>
+    <string name="delete_from_phone">Delete from phone</string>
+    <string name="change_display_name">Change display name</string>
+    <string name="go_to_directory">Go to file location</string>
+
+    <string name="first_time_help">Help:\n\nSingle Click to search for definition.\n\n Long touch to
+        open the option bar.\n\nCheers!
+    </string>
+
+    <!-- download message box -->
+    <string name="dm_dict_message">You need to download the Japnese dictionary (11MB) for this
+        reader to show definitions of words
+    </string>
+    <string name="dm_dict_title">Download Dictionary</string>
+    <string name="dm_dict_yes">Download</string>
+    <string name="dm_dict_no">Cancel</string>
+    <string name="dm_dict_success">Download successful</string>
+    <string name="dm_dict_failed">Download failed</string>
+    <string name="dm_dict_downloading">Downloading the dictionary database</string>
+    <string name="dm_dict_unzipping">Extracting the dictionary. \nThis may take a while.</string>
+    <string name="dm_dict_unzip_failed">Failed to extract</string>
+    <string name="dm_dict_unzip_success">Extract successful</string>
+    <string name="dm_dict_failed_to_load">Failed to load the dictionary. Do you want to delete the
+        dictionary data and re-download the dictionary?
+    </string>
+    <string name="dm_dict_alternate_download_address">If you have trouble downloading the
+        dictionary, please email me at steinsgate.sg@gmail.com.\nSorry for the inconvenience.
+    </string>
+
+    <!-- option menu text -->
+    <string name="opt_brightness">Brightness</string>
+    <string name="opt_text_size">Text Size</string>
+    <string name="opt_settings">Option</string>
+    <string name="opt_seek_text">Scroll</string>
+    <string name="opt_text_select">Select Text</string>
+    <string name="opt_my_note">My Note</string>
+    <string name="opt_add_bookmark">Bookmark</string>
+    <string name="opt_bookmark">Bookmark</string>
+
+    <!-- action menu text -->
+    <string name="edit_highlight">Highlight</string>
+    <string name="edit_copy">Copy</string>
+    <string name="edit_google">Google</string>
+    <string name="edit_share">Share</string>
+    <string name="edit_delete">Delete</string>
+    <string name="edit_save">Save</string>
+
+    <!-- message box -->
+    <string name="msg_ok">OK</string>
+    <string name="msg_yes">Yes</string>
+    <string name="msg_no">No</string>
+    <string name="msg_cancel">Cancel</string>
+    <string name="msg_default">Default</string>
+    <string name="msg_try_again">Try Again</string>
+
+
+    <string name="failed_dir_not_found">Unable to find the directory</string>
+    <string name="failed_word_not_found">Cannot find any valid words</string>
+    <string name="failed_no_filemanager">No file manager is installed</string>
+    <string name="failed_to_open_file">Failed to open the specified file&#160;</string>
+    <string name="failed_to_receive_text">Failed to get shared text</string>
+    <string name="failed_load_dict">Failed to load dictionary</string>
+    <string name="failed_to_save_word">Failed to save word</string>
+    <string name="failed_to_share_word">Failed to share word</string>
+    <string name="failed_file_not_found">File not found</string>
+    <string name="failed_unknown_error">An unkonwn error has occured</string>
+    <string name="success_save_word">%s Saved</string>
+
+    <string name="clipboard_copy_success">%s\nCopied to clipboard</string>
+    <string name="clipboard_copy_failed">Failed to copy word to the clipboard.</string>
+
+    <!-- file manager -->
+    <string name="filemanager">Jade Reader File Manager</string>
+    <string name="files_empty_folder">Empty directory</string>
+    <string name="files_no_sd_card">SD Card empty or umounted.</string>
+    <string name="files_copied">Files are copied</string>
+    <string name="files_cut">Files are cut</string>
+    <string name="files_copy_failed">Copy failed</string>
+    <string name="files_cut_failed">Cut failed</string>
+    <string name="files_no_selection">No files are selected</string>
+    <string name="files_paste_failed">Failed to paste files</string>
+    <string name="files_pasted">Files are pasted</string>
+    <string name="files_delete_confirm">Are you sure you want to delete the selected files?</string>
+    <string name="file_delete_confirm">Are you sure you want to delete the selected file?</string>
+    <string name="files_delete_failed">Failed to delete files</string>
+    <string name="files_deleted">Files are deleted</string>
+    <string name="files_select_ready">Multi Select Ready</string>
+    <string name="files_rename">Rename file</string>
+    <string name="files_rename_failed">Rename failed</string>
+    <string name="files_no_multi_rename">Multiple files rename not supported</string>
+    <string name="files_choose_title">Choose file</string>
+    <string name="files_chosen">The following file will be used to save words:\n\n%s</string>
+    <string name="files_created">File created successfully</string>
+    <string name="files_created_failed">Failed to create file</string>
+    <string name="files_new">New File</string>
+    <string name="folder_new">New Folder</string>
+    <string name="folder_new_title">New Folder or File</string>
+    <string name="folder_created_failed">Failed to create folder</string>
+    <string name="folder_created">Folder created successfully</string>
+    <string name="folder_chosen">The following folder will be used to save shared text:\n\n%s
+    </string>
+    <string name="folder_choose_title">Choose Folder</string>
+    <string name="folder_choose_must_be_folder">You must choose a folder!</string>
+
+    <!-- file manager context menu -->
+    <string name="file_manager_context_menu_title">Operation</string>
+
+    <!-- action string -->
+    <string name="action_cut">Cut</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_paste">Paste</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_new">New</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_up">Up</string>
+    <string name="action_select">Select</string>
+    <string name="action_choose">Pick this</string>
+    <string name="action_choose_file">Long click to pick file</string>
+    <string name="action_choose_folder">Long click to pick folder</string>
+    <string name="action_span_goto">Go to bookmark</string>
+    <string name="action_span_delete">Delete</string>
+
+    <string name="overflow_new">New</string>
+    <string name="overflow_back">Back</string>
+    <string name="overflow_multiselect">Multi Select</string>
+    <string name="overflow_copy">Copy</string>
+    <string name="overflow_cut">Cut</string>
+    <string name="overflow_paste">Paste</string>
+    <string name="overflow_delete">Delete</string>
+    <string name="overflow_cancel">Cancel</string>
+    <string name="overflow_rename">Rename</string>
+
+    <!-- preference key
+    the sring content doesn't matter, as long as
+    they are different
+    -->
+    <string name="pref_bg_color">jtext_color</string>
+    <string name="pref_highlight_color">highlight_color</string>
+    <string name="pref_highlight_time">highlight_time</string>
+    <string name="pref_vocabulary_save_location">saving_location</string>
+    <string name="pref_vocabulary_save_location_summary">The file to save vocabulary. Currently set
+        to %s
+    </string>
+    <string name="pref_share_text_save_location">p_share_save_location</string>
+    <string name="pref_share_text_save_location_summary">Shared text is saved to: %s</string>
+    <string name="pref_long_click_save_word">long_click_save_word</string>
+    <string name="pref_long_click_find_word">long_click_find_word</string>
+    <string name="pref_gloss_height">gloss_height</string>
+    <string name="pref_gloss_text_size">gloss_text_size</string>
+    <string name="pref_show_status_bar">show_status_bar</string>
+    <string name="pref_precise_offset">precise_offset</string>
+    <string name="pref_reopen_immediately">reopen_immediately</string>
+    <string name="pref_long_click_to_select">long_click_to_select_word</string>
+    <string name="pref_reminder_reset_time">pref_reminder_reset_time</string>
+    <string name="pref_reminder_countdown">pref_reminder_countdown</string>
+    <string name="pref_reminder_never_show">pref_reminder_never_show</string>
+    <string name="pref_orientation">pref_orientation</string>
+    <string name="pref_text_color">pref_text_color</string>
+    <string name="pref_line_spacing">pref_line_spacing</string>
+    <string name="pref_line_spacing_summary">Set the line spacing of the text</string>
+    <string name="pref_text_padding">pref_text_padding</string>
+    <string name="pref_definition_text_color">pref_def_text_color</string>
+    <string name="pref_definition_bg_color">pref_def_bg_color</string>
+    <string name="pref_location_history">pref_loc_history</string>
+    <string name="pref_auto_dismiss_defn_view">pref_auto_dismiss_defn</string>
+    <string name="pref_save_color_scheme">pref_save_color_scheme</string>
+    <string name="pref_load_color_scheme">pref_load_color_scheme</string>
+    <string name="pref_ignore_bracket">pref_ignore_bracket</string>
+
+    <string name="default_highlight_duration">3000</string>
+
+    <string name="cd_choose_book">Choose Book</string>
+
+    <!--suppress AndroidLintTypographyEllipsis -->
+    <string name="drag_symbol">...</string>
+    <string name="close_button">X</string>
+    <string name="wrong_path">Unable to open file. An incorrect path has been specified.</string>
+    <string name="open_book">Open\nFile</string>
+    <string name="help">Help</string>
+    <string name="option">Option</string>
+    <string name="reminder">Reminder</string>
+    <string name="new_name">New Name</string>
+    <string name="confirm_recent_file_list_corruption">Jade Reader failed to load the list of
+        recently opened files.
+        Do you want to clear the list?
+    </string>
+    <string name="fyi_encoding">The text is loaded in encoding %s.</string>
+    <string name="fyi_converted_from_html">Converted from HTML</string>
+    <string name="fyi_list_is_empty">The list is currently empty.</string>
+    <string name="fyi_press_again_to_exit">Press again to exit</string>
+
+    <string name="change_encoding">Change encoding</string>
+    <string name="title_highlight_picker">Pick a color for the highlight</string>
+    <string name="highlight_tip">Long-tap to change color</string>
+    <string name="bookmark_saved">Bookmark Saved</string>
+
+    <string name="tab_highlights">Highlight</string>
+    <string name="tab_bookmarks">Bookmarks</string>
+    <string name="tab_history">History</string>
+
+    <string name="key_bookdata">key_bookdata</string>
+    <string name="key_bookmark_offset">key_offset</string>
+
+    <!-- keys for setTag getTag-->
+    <string name="tag_word_pos">tag_word_pos</string>
+    <string name="tag_word_list">tag_entries</string>
+    <string name="tag_word_view">tag_word_view</string>
+
+</resources>

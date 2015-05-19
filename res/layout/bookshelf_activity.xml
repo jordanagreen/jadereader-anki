@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2013 Ray Zhou
+
+JadeRead is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JadeRead is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with JadeRead.  If not, see <http://www.gnu.org/licenses/>
+
+Author: Ray Zhou
+Date: 2013 04 26
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            >
+
+        <com.zyz.mobile.widget.MyButton
+                android:id="@+id/bookshelf_help"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/jade_button"
+                android:textColor="@color/white"
+                android:text="@string/help"
+                android:textSize="20sp"
+                android:layout_margin="1dp"
+                android:gravity="bottom|left"
+                />
+
+        <com.zyz.mobile.widget.MyButton
+                android:id="@+id/bookshelf_option"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/jade_button"
+                android:textColor="@color/white"
+                android:text="@string/option"
+                android:textSize="20sp"
+                android:layout_margin="1dp"
+                android:gravity="bottom|left"
+                />
+
+        <com.zyz.mobile.widget.MyButton
+                android:id="@+id/bookshelf_open"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/jade_button"
+                android:textColor="@color/white"
+                android:text="@string/open_book"
+                android:textSize="20sp"
+                android:layout_margin="1dp"
+                android:gravity="bottom|left"
+                />
+
+    </LinearLayout>
+    <com.zyz.mobile.widget.MyTextView
+            android:id="@+id/history_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/history_title"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/grey"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            />
+
+    <ListView
+            android:id="@+id/bookshelf_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/grey"
+            android:dividerHeight="1px"
+            />
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2013 Ray Zhou
+
+JadeRead is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JadeRead is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with JadeRead.  If not, see <http://www.gnu.org/licenses/>
+
+Author: Ray Zhou
+Date: 2013 04 26
+
+-->
+<resources>
+    <!-- if length of array is changed, please also see if ArrayIndexOutOfBound happens in SettingActivity -->
+    <string-array name="listTouchOption">
+        <item>Click</item>
+        <item>Long Click</item>
+    </string-array>
+
+    <!-- if length of array is changed, please also see if ArrayIndexOutOfBound happens in SettingActivity -->
+    <string-array name="ListHighlightTime">
+        <item>0 seconds</item>
+        <item>1 second</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>5 seconds</item>
+        <item>7 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>25 seconds</item>
+    </string-array>
+    <string-array name="ListHighlightTimeValues">
+        <item>0</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>7000</item>
+        <item>10000</item>
+        <item>15000</item>
+        <item>25000</item>
+    </string-array>
+
+    <!-- orientation preference -->
+    <string-array name="OrientationString">
+        <item>Auto</item>
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+    <string-array name="OrientationValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- line spacing -->
+    <string-array name="LineSpacingString">
+        <item>Single Line</item>
+        <item>1.5 Line</item>
+        <item>Double Line</item>
+    </string-array>
+    <string-array name="LineSpacingValues">
+        <item>1</item>
+        <item>1.5</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Color scheme -->
+    <string-array name="ColorScheme">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="ColorSchemeValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

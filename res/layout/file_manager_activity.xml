@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2013 Ray Zhou
+
+JadeRead is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JadeRead is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with JadeRead.  If not, see <http://www.gnu.org/licenses/>
+
+Author: Ray Zhou
+Date: 2013 04 26
+
+-->
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:jade="http://schemas.android.com/apk/res/com.zyz.mobile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <com.zyz.mobile.widget.MenuBar
+            android:id="@+id/file_manager_menu_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            jade:button_background="@color/transparent"
+            jade:button_background_on_pressed="#aa00aa00"
+            jade:divider_color="@color/white"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="3dip"
+            android:background="#FF838383"/>
+
+    <HorizontalScrollView
+            android:id="@+id/file_manager_path_scroller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        <LinearLayout
+                android:id="@+id/file_manager_path_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <ListView
+            android:id="@+id/filelist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/transparent"
+            />
+
+    <TextView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/emptylist"
+            android:text="@string/files_empty_folder"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            />
+</LinearLayout>

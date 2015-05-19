@@ -1,0 +1,141 @@
+<!--
+Copyright (C) 2013 Ray Zhou
+
+JadeRead is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+JadeRead is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with JadeRead.  If not, see <http://www.gnu.org/licenses/>
+
+Author: Ray Zhou
+Date: 2013 04 26
+
+-->
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="Preference">
+
+    <PreferenceCategory android:title="Application Behaviour">
+        <ListPreference
+                android:title="Highlight Duration"
+                android:summary="The time a word is highlighted when being searched"
+                android:key="@string/pref_highlight_time"
+                android:entries="@array/ListHighlightTime"
+                android:entryValues="@array/ListHighlightTimeValues"
+                android:defaultValue="5000"/>
+        <CheckBoxPreference
+                android:title="Auto Dismiss Definition View"
+                android:summary="Automatically dismiss the definition view after actions"
+                android:key="@string/pref_auto_dismiss_defn_view"
+                android:defaultValue="false"/>
+        <!--<CheckBoxPreference-->
+        <!--android:title="Long click to search for definition"-->
+        <!--android:summary="Use long click to find word, single click to open menu"-->
+        <!--android:key="@string/pref_long_click_find_word"-->
+        <!--android:defaultValue="false"-->
+        <!--/>-->
+        <!--<CheckBoxPreference-->
+        <!--android:title="Long click to save word"-->
+        <!--android:summary="Use long click to save word to file, single click to copy word to clipboard"-->
+        <!--android:key="@string/pref_long_click_save_word"-->
+        <!--android:defaultValue="true"-->
+        <!--/>-->
+        <!--<CheckBoxPreference-->
+        <!--android:title="Remember height of definition view"-->
+        <!--android:summary="Restore the previous height of the definition view when it's opened"-->
+        <!--android:key="@string/pref_gloss_height"-->
+        <!--android:defaultValue="true"/>-->
+        <!--<CheckBoxPreference-->
+        <!--android:title="Remember text size of definition view"-->
+        <!--android:summary="The text size of the content in the definition view will be saved."-->
+        <!--android:key="@string/pref_gloss_text_size"-->
+        <!--android:defaultValue="true"/>-->
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Files Locations">
+        <Preference
+                android:title="File to save vocabulary"
+                android:summary="@string/pref_vocabulary_save_location_summary"
+                android:key="@string/pref_vocabulary_save_location"/>
+        <Preference
+                android:title="Folder to save text shared to Jade Reader"
+                android:summary="@string/pref_share_text_save_location_summary"
+                android:key="@string/pref_share_text_save_location"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Text Formatting">
+        <ListPreference
+                android:title="Text Line Spacing"
+                android:summary=""
+                android:key="@string/pref_line_spacing"
+                android:entries="@array/LineSpacingString"
+                android:entryValues="@array/LineSpacingValues"
+                android:defaultValue="1"
+                />
+        <CheckBoxPreference
+                android:title="Add Padding on the side"
+                android:summary="Adds some extra padding on the sides for easier maneuverability."
+                android:key="@string/pref_text_padding"
+                android:defaultValue="false"
+                />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Colours">
+        <Preference
+                android:title="Text Colour"
+                android:summary="Choose the text colour."
+                android:key="@string/pref_text_color"/>
+        <Preference
+                android:title="Background Colour"
+                android:summary="Choose the background colour of the text."
+                android:key="@string/pref_bg_color"/>
+        <Preference
+                android:title="Highlight Colour"
+                android:summary="Choose the highlight of words."
+                android:key="@string/pref_highlight_color"/>
+        <Preference
+                android:title="Definition Text Colour"
+                android:summary="Choose the colour of the text for the definition view."
+                android:key="@string/pref_definition_text_color"/>
+        <Preference
+                android:title="Defintion Background Colour"
+                android:summary="Choose the colour of the background of the definition view."
+                android:key="@string/pref_definition_bg_color"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Misc">
+        <CheckBoxPreference
+                android:title="Show status bar"
+                android:summary="Show the status on the main text window."
+                android:key="@string/pref_show_status_bar"
+                android:defaultValue="true"/>
+        <ListPreference
+                android:title="Orientation"
+                android:summary=""
+                android:key="@string/pref_orientation"
+                android:entries="@array/OrientationString"
+                android:entryValues="@array/OrientationValues"
+                android:defaultValue="0"
+                />
+        <CheckBoxPreference
+                android:title="Reopen last file immediately"
+                android:summary="Skip the bookshelf and reopen the last file immediately when opening Jade Reader."
+                android:key="@string/pref_reopen_immediately"
+                android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Experimental">
+        <CheckBoxPreference
+                android:title="Ignore Bracket"
+                android:summary="Ignores kana inside brackets when looking up words"
+                android:key="@string/pref_ignore_bracket"
+                android:defaultValue="true"/>
+        <CheckBoxPreference
+                android:title="Precise Offset"
+                android:summary="Touch will locate word/character more accurately than before. Unchek this if you are experiencing problems."
+                android:key="@string/pref_precise_offset"
+                android:defaultValue="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>
