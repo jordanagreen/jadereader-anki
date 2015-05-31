@@ -987,7 +987,7 @@ public class JTextActivity extends BaseActivity implements
 						copyWordToClipboard(position);
 						break;
 					case ACTION_SAVE:
-						saveWordAtPosition(position);
+						sendWordToAnki(position);
 						break;
 					case ACTION_SHARE:
 						try {
@@ -1036,18 +1036,17 @@ public class JTextActivity extends BaseActivity implements
 								int start = Math.min(mSelectionModifier.getStart(), mSelectionModifier.getEnd());
 								int end = Math.max(mSelectionModifier.getStart(), mSelectionModifier.getEnd());
 								UserSpan spanObj = (new UserSpan.Builder())
-										  .setType(UserSpanType.HIGHLGHT)
-										  .setColor(color)
-										  .setStart(start)
-										  .setEnd(end)
-										  .create();
+										.setType(UserSpanType.HIGHLGHT)
+										.setColor(color)
+										.setStart(start)
+										.setEnd(end)
+										.create();
 								spanObj.setDescription(mUserBookData.getDefaultDescription(spanObj));
 
 								if (mCurrentSelectedSpan != null) {
 									mUserBookData.replaceSpan(spanObj, mCurrentSelectedSpan);
 									mCurrentSelectedSpan = spanObj;
-								}
-								else {
+								} else {
 									mUserBookData.insertSpan(spanObj);
 								}
 
@@ -1065,7 +1064,7 @@ public class JTextActivity extends BaseActivity implements
 					}
 					case ACTION_GOOGLE: {
 						startActivity(new Intent(Intent.ACTION_VIEW,
-								  Uri.parse(mGoogleQuery + mSelectionModifier.getSelectedText())));
+								Uri.parse(mGoogleQuery + mSelectionModifier.getSelectedText())));
 						break;
 					}
 					case ACTION_SHARE: {
@@ -1085,9 +1084,9 @@ public class JTextActivity extends BaseActivity implements
 			@Override
 			public void onReveal(Concealable concealable) {
 				setActionMenuBarPosition(
-						  mJScrollView.getScrollY() < mActionBarRepositionThreashold ?
-									 POSITION_BOTTOM :
-									 POSITION_TOP);
+						mJScrollView.getScrollY() < mActionBarRepositionThreashold ?
+								POSITION_BOTTOM :
+								POSITION_TOP);
 			}
 		});
 	}
@@ -1332,6 +1331,29 @@ public class JTextActivity extends BaseActivity implements
 		if (mAutoDismissGlossView) {
 			mGlossView.conceal();
 		}
+	}
+
+	private void sendWordToAnki(int position) {
+		Entries entries = (Entries) mGlossView.getTag(R.string.tag_word_list);
+		try {
+			Entry entry = entries.get(position);
+			String word = entry.getWord();
+			// remove the / from the beginning of the translation
+			String meaning = entry.getReading() + "\n" + entry.getGloss().substring(1);
+			Intent intent = new Intent("org.openintents.action.CREATE_FLASHCARD");
+			intent.putExtra("SOURCE_LANGUAGE", "ja");
+			intent.putExtra("TARGET_LANGUAGE", "en");
+			intent.putExtra("SOURCE_TEXT", word);
+			intent.putExtra("TARGET_TEXT", meaning);
+			startActivity(intent);
+		} catch (Exception e) {
+			showToast(R.string.failed_to_save_word);
+		}
+
+		if (mAutoDismissGlossView) {
+			mGlossView.conceal();
+		}
+
 	}
 
 	/**
@@ -1857,7 +1879,7 @@ public class JTextActivity extends BaseActivity implements
 	{
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			saveWordAtPosition(position);
+			sendWordToAnki(position);
 		}
 
 		@Override

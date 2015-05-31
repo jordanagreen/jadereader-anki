@@ -111,6 +111,14 @@ public class Entry implements Parcelable{
 	public String getWord() {
 		return word;
 	}
+
+	public String getReading() {
+		return reading;
+	}
+
+	public String getGloss() {
+		return gloss;
+	}
 	
 	/**
 	 * return a string representation of this entry in a compact form (max 1 newline character)
