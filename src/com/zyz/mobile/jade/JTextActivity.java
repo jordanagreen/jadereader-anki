@@ -1338,8 +1338,8 @@ public class JTextActivity extends BaseActivity implements
 		try {
 			Entry entry = entries.get(position);
 			String word = entry.getWord();
-			// remove the / from the beginning of the translation
-			String meaning = entry.getReading() + "\n" + entry.getGloss().substring(1);
+			// remove the / from the beginning of the translation and switch / to ;
+			String meaning = entry.getReading() + "\n" + entry.getGloss().substring(1).replace("/", "; ");
 			Intent intent = new Intent("org.openintents.action.CREATE_FLASHCARD");
 			intent.putExtra("SOURCE_LANGUAGE", "ja");
 			intent.putExtra("TARGET_LANGUAGE", "en");

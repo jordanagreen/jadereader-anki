@@ -1,0 +1,2 @@
+# Jadereader Anki
+A fork of the excellent [Jadereader](https://bitbucket.org/rayzhou/jaderead-restart) Android app, meant for reading Japanese texts on Android and easily looking up words. The only difference is that instead of sending words to a vocabulary file to be used later, this formats the text a bit and sends it directly to Anki to create a flashcard for studying.
